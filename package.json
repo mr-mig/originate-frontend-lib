@@ -1,0 +1,15 @@
+{
+  "name": "originate-frontend-lib",
+  "version": "0.1.0",
+  "description": "loom origin for creating ... ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "loom": "~3.x.x",
+    "glob": "~3.2.7"
+  }
+}
+
