@@ -1,54 +1,65 @@
 {{appName}}
 {{headerChars}}
 
+Usage
+-----
 
-## Setup
+###AMD
 
-1. Make sure you have `node` installed and you're running node version 0.10!
+If you have AMD modules support in your project, you can use this library like that:
+
+```javascript
+define(['path/to/library/{{appName}}'], function({{appName}}){
+
+});
+```
+
+###CommonJS
+
+If you have CommonJS support in your project, you can use this library like that:
+
+```javascript
+var lib = require('{{appName}}/dist/standalone.js');
+```
+
+###Standalone
+
+If you prefere to add the library directly to the HTML page, use it like that:
+
+```html
+<script src="path/to/lib/{{appName}}/dist/standalone.js"></script>
+```
+
+The library will be available as `window['{{globalName}}']` global variable.
+
+
+API
+---
+
+
+
+
+## How to develop the library?
+
+### Initialize
 
 ```
-node --version
+git clone path/to/library
+npm i
+npm i -g bower
+bower install
 ```
 
-1. Clone the project to your working directory:
+
+### Make a standalone build
+
+[Webpack][1] takes care of creating a [standalone][2] [UMD][3] build. Just run:
 
 ```
-git clone git@github.com:yetu/frontend-library-starter.git <library_name>
-	cd <library_name>
-	```
+npm run pack
+```
 
-	1. Delete `.git` to cleanup the repository linkage and all unnecessary commits:
-
-	```
-	rm -rf .git
-	```
-
-	1. Install all node and bower components:
-
-	```
-	npm install
-	bower install
-	```
-
-	1. Initialize a new repository:
-
-	```
-	git init
-	```
-
-	## Configuring
-
-	Before hacking, please, change the values marked by `__GLOBAL_NAME__` and `__LIB_NAME__` tokens inside these files:
-
-	```
-	webpack.config.js
-	package.json
-	bower.json
-	```
-
-	Other things are configurable for your taste.
-
-	## Run tests
+## Run tests
 
 	To run a single test use:
 
@@ -62,27 +73,34 @@ git clone git@github.com:yetu/frontend-library-starter.git <library_name>
 	npm run tdd
 	```
 
-	This commands will run `karma` test runner with `jasmine` framework.
+  This command will run [karma][4] with [jasmine 2.1][5].
+
 	After the test run you will get the **test coverage reports** inside the `/coverage` folder!
+
+  The coverage is created by [istanbul][6].
 
 	## Anti-ruining Automated Quality Assurance System
 
 	Are you afraid of committing "bad quality" code and ruining everything?
 	Afraid no more!
 
-	This project has a **git hooks integration**, which will run tests and check your javascript **before each commit**.
+	This project has a **git hooks integration** (sponsored by [husky][9]), which will run tests and check your javascript **before each commit**.
 
-	You are safeguarded against silly mistakes by `jshint` and `fixmyjs`!
+	You are safeguarded against silly mistakes by [jshint][7] and [fixmyjs][8]!
 
 	You will not be able to commit the code with:
 
 	1. Failing tests
 	2. Bad javascript code style
 
-	# Requirements for code
-
-	1. All your modules should be AMD modules! (As you are writing code for browser)
-	2. Your library should have a standalone javascript build file in `/dist` (webpack is handling that automatically)
-	3. Make attention to *external* dependencies! All those dependencies should be managed by `bower`.
 
 
+[1]:http://webpack.github.io/
+[2]:http://webpack.github.io/docs/configuration.html#output-librarytarget
+[3]:https://github.com/umdjs/umd
+[4]:http://karma-runner.github.io/0.12/index.html
+[5]:http://jasmine.github.io/2.1/introduction.html
+[6]:http://gotwarlost.github.io/istanbul/
+[7]:http://jshint.com/about/
+[8]:https://github.com/jshint/fixmyjs
+[9]:https://github.com/typicode/husky
