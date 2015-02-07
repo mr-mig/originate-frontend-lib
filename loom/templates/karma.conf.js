@@ -14,7 +14,7 @@ webpackConfig.module.postLoaders = [{
 
 module.exports = function (config) {
 	config.set({
-		basePath: '',
+		basePath: '../../),
 		frameworks: ['jasmine'],
 		files: [
 			// load all external dependencies here (refere to webpack config)

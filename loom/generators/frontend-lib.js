@@ -2,6 +2,7 @@ var glob = require('glob');
 
 exports.before = function(next, env) {
   env.appName = env.args[0];
+  env.globalName = env.args[1] || '_' + env.appName;
   next();
 };
 
