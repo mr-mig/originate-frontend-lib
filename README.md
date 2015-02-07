@@ -18,25 +18,30 @@ $ npm install
 
 If you have [hub][10] installed, you can streamline your process like that:
 
-```
+```sh
 originate frontend-lib my-lib __my-lib-global-name
 cd my-lib
 git init
 npm install
-npm run pack
-git commit -am "Initial commit"
+npm run pack && npm run test
+git add . && git commit -am "Initial commit"
 hub create
 git push origin master
+```
+
+Here is a copy-paste oneliner of the previous commands:
+```
+git init; npm i; npm run pack && npm run test; git add . && git commit -am "Initial commit"; hub create; git push origin master
 ```
 
 What's inside?
 --------------
 
-* Webpack[1] build configured to produce a [standalone][2] [UMD][3] version in `dist/standalone.js`
-* Karma[4] + Jasmine[5] test setup
+* [Webpack][1] build configured to produce a [standalone][2] [UMD][3] version in `dist/standalone.js`
+* [Karma][4] + [Jasmine][5] test setup
 * Coverage report generated via [istanbul][6]
 * NPM and bower support
-* [Pre-commit hook][9] with jshint[7] and fixmyjs[8]
+* [Pre-commit hook][9] with [jshint][7] and [fixmyjs][8]
 
 Global Name
 -----------
