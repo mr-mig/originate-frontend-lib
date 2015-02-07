@@ -24,6 +24,7 @@ cd my-lib
 git init
 npm install
 npm run pack
+git commit -am "Initial commit"
 hub create
 git push origin master
 ```
