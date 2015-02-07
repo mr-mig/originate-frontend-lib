@@ -1,7 +1,7 @@
 originate-frontend-lib
 ======================
 
-[loom][1] origin for creating ...
+[loom][1] origin for creating frontend javascript libraries.
 
 Usage
 -----
