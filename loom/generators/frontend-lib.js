@@ -9,12 +9,13 @@ exports.before = function(next, env) {
 exports.present = function(next, env) {
   next({
     appName: env.appName,
+    globalName: env.globalName,
     headerChars: env.appName.split('').map(function() { return '='; }).join('')
   })
 };
 
 // just grab all the templates in the directory so you don't have to configure them
-exports.templates = glob.sync(__dirname+'/../templates/**/*.hbs').map(function(template) {
+exports.templates = glob.sync(__dirname+'/../templates/**/**.hbs', {dot: true}).map(function(template) {
   var base = __dirname.replace(/generators$/, '')+'templates/';
   return template.replace(base, '');
 });
