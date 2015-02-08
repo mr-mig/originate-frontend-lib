@@ -4,14 +4,15 @@
   "description": "{{appName}} frontend library",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/karma/bin/karma start ./karma.conf.js --single-run",
-    "tdd": "node ./node_modules/karma/bin/karma start ./karma.conf.js",
+    "test": "./node_modules/karma/bin/karma start ./karma.conf.js --single-run --browsers PhantomJS,Firefox",
+    "local-test": "./node_modules/karma/bin/karma start ./karma.conf.js --single-run"
+    "tdd": "./node_modules/karma/bin/karma start ./karma.conf.js",
     "js-files": "find . -name '*.js' ! -path './node_modules/*' ! -path './coverage/*' ! -path './dist/*'",
     "jshint": "node_modules/.bin/jshint `npm run -s js-files`",
     "fixmyjs": "node_modules/.bin/fixmyjs --legacy `npm run -s js-files`",
     "verify": "npm run fixmyjs; npm run jshint",
-    "precommit": "npm test && npm run verify",
-		"pack": "./node_modules/.bin/webpack -p"
+    "precommit": "npm run local-test && npm run verify",
+    "pack": "./node_modules/.bin/webpack -p"
   },
   "repository": {},
   "author": "",
