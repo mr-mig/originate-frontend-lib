@@ -13,7 +13,7 @@
     "verify": "npm run fixmyjs; npm run jshint",
     "precommit": "npm test && npm run verify",
     "pack": "./node_modules/.bin/webpack -p",
-    "coveralls" : "npm run test-ci && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls" : "npm run test-ci && cat ./coverage/phantomjs/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {},
   "author": "",

@@ -38,10 +38,11 @@ What's inside?
 --------------
 
 * [Webpack][1] build configured to produce a [standalone][2] [UMD][3] version in `dist/standalone.js`
-* [Karma][4] + [Jasmine][5] test setup
+* [Karma][4] + [Jasmine][5] test setup (with CI integration for PhantomJS and Firefox!)
 * Coverage report generated via [istanbul][6]
 * NPM and bower support
 * [Pre-commit hook][9] with [jshint][7] and [fixmyjs][8]
+* Out-of-box integration with [travis][11] and [coveralls][12]
 
 Global Name
 -----------
@@ -61,4 +62,6 @@ Global name is the string, which is added to the `window` object, if your librar
   [8]:https://github.com/jshint/fixmyjs
   [9]:https://github.com/typicode/husky
   [10]:https://hub.github.com
+  [11]:https://travis-ci.org
+  [12]:https://coveralls.io
 
