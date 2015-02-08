@@ -11,7 +11,7 @@ exports.present = function(next, env) {
     appName: env.appName,
     globalName: env.globalName,
     headerChars: env.appName.split('').map(function() { return '='; }).join('')
-  })
+  });
 };
 
 // just grab all the templates in the directory so you don't have to configure them
