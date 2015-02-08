@@ -79,6 +79,18 @@ After the test run you will get the **test coverage reports** inside the `/cover
 
 The coverage is created by [istanbul][6].
 
+## Bump version
+
+To bump a version in both `package.json` and `bower.json`, run this
+
+
+```
+npm version patch && bower version patch
+```
+
+**Note:** Bower command should be the last one. Bower will tag and and commit automatically.
+
+
 ## Anti-ruining Automated Quality Assurance System
 
 Are you afraid of committing "bad quality" code and ruining everything?
