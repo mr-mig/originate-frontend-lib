@@ -1,7 +1,7 @@
 originate-frontend-lib
 ======================
 
-[loom][1] origin for creating frontend javascript libraries.
+[loom][1] origin for creating bulletproof javascript libraries with isomorphic packaging.
 
 This template is based on [this project][23]. Refer to it's documentation for details.
 
