@@ -23,6 +23,8 @@ module.exports = {
 		// 'jquery': 'jQuery'
 	},
 	module: {
-		loaders : []
+		loaders : [
+			{ test: /src\/.*\.js$/, loader: '6to5-loader'}
+		]
 	}
 };
