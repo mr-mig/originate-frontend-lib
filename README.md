@@ -33,7 +33,7 @@ git push origin master
 
 Here is a copy-paste oneliner of the previous commands:
 ```
-git init; npm i; npm run pack && npm run test; git add . && git commit -am "Initial commit"; hub create; git push origin master
+git init; npm i; npm run build-all && npm run test; git add . && git commit -am "Initial commit"; hub create; git push origin master
 ```
 
 What's inside?
