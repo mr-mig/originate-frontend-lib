@@ -3,7 +3,7 @@
   "version": "0.9.4",
   "description": "loom origin for creating bulletproof javascript libraries with isomorphic packaging",
   "scripts": {},
-  "author": "Mr_Mig",
+  "author": "mr-mig",
   "license": "MIT",
   "repository": {
     "type": "git",
