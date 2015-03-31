@@ -1,6 +1,6 @@
 {
   "name": "originate-frontend-lib",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "loom origin for creating bulletproof javascript libraries with isomorphic packaging",
   "scripts": {},
   "author": "mr-mig",
