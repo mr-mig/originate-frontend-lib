@@ -25,7 +25,7 @@ originate frontend-lib my-lib __my-lib-global-name
 cd my-lib
 git init
 npm install
-npm run pack && npm run test
+npm run build-all && npm run test
 git add . && git commit -am "Initial commit"
 hub create
 git push origin master
