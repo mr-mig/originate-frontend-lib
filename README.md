@@ -1,7 +1,7 @@
 originate-frontend-lib
 ======================
 
-[loom][1] origin for creating bulletproof javascript libraries with isomorphic packaging.
+[loom][loom] origin for creating bulletproof javascript libraries with isomorphic packaging.
 
 This template is based on [this project][23]. Refer to it's documentation for details.
 
@@ -68,7 +68,7 @@ Some really nice stuff is packed:
 * Out-of-box integration with [travis][11], [coveralls][12] and [bithound][19]
     *Everything is automated! Get those cool badges!*
 
-* Sane defaults for [`.editorconfig`][23], [`.npmignore`][24] and [`.gitignore`][25]
+* Sane defaults for [`.editorconfig`][24], [`.npmignore`][25] and [`.gitignore`][26]
     *No rubbish get into the repo*
 
 
@@ -102,6 +102,7 @@ Global name is the string, which is added to the `window` object, if your librar
   [21]:http://browserify.org/
   [22]:https://github.com/systemjs/systemjs
   [23]:https://github.com/yetu/frontend-library-starter
-  [23]:http://editorconfig.org/
-  [24]:https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
-  [25]:https://github.com/github/gitignore
+  [24]:http://editorconfig.org/
+  [25]:https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+  [26]:https://github.com/github/gitignore
+  [loom]:https://www.npmjs.com/package/loom
